@@ -26,13 +26,14 @@ public class GuestServiceImpl implements GuestService {
 
     @Override
     public GuestDto create(CreateGuestRequest request) {
-        return GuestMapper.INSTANCE.toDto(guestRepository
-                .save(Guest
-                        .builder()
-                        .name(request.getName())
-                        .isWithGroup(request.getIsWithGroup())
-                        .groupId(request.getGroupId())
-                        .build()));
+        return GuestMapper.INSTANCE.toDto(
+                guestRepository
+                        .save(Guest
+                                .builder()
+                                .name(request.getName())
+                                .isWithGroup(request.getIsWithGroup())
+                                .groupId(request.getGroupId())
+                                .build()));
     }
 
 //    @Override

@@ -29,7 +29,7 @@ public class Guest {
     @Column(name="group_id")
     Long groupId;
 
-    @Column(name="is_with_group")
+    @Column(name="is_with_group", nullable = false)
     Boolean isWithGroup;
 
 }
